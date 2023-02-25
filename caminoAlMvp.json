@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nikola Jokic",
+    "club": "Denver Nuggets",
+    "img": "nikola-jokic-mvp.jpeg"
+  },
+  {
+    "id": 2,
+    "nombre": "Luka Docic",
+    "club": "Dallas Mavericks",
+    "puesto": "Base",
+    "img": "luka-Doncic-NBA-MVP-Trophy-1.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Jaysom Tatum",
+    "club": "Boston Celtics",
+    "puesto": "Escolta",
+    "img": "jaysonMvp.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Giannis Antetokounmpo",
+    "club": "Milweake Bucks",
+    "puesto": "Ala-Pívot",
+    "img": "giannisMvp.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Joel Embid",
+    "club": "Philadelphia 76ers",
+    "puesto": "Pivot",
+    "img": "embidMvp.jpg"
+  }
+]

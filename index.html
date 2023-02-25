@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final Javascript</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Iconos Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  </head>
+  <body class="modoOscuro">
+
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary scrolling-navbar fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">NBA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">All Star</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+  <article>
+    <div class="container-fluid">
+      <br><br>
+      <figure class="text-end">
+        <blockquote class="blockquote">
+          <p>La clave al exito es el fracaso</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Michael Jordan 
+        </figcaption>
+      </figure>
+      <!-- Fecha y hora -->
+      <div id="diaFecha" class="container-fluid fechaHora"></div>
+      <div id="hora" class="container-fluid fechaHora"></div>
+      <br>
+      <!-- Queremos conocerte -->
+      <div class="container-fluid">
+        <input style="border: 1px solid black" type="text"id="nombreCliente" placeholder="Ingresá tu nombre" >
+        <button type="button" class="btn btn-primary" id="bienvenidaSemantica">Queremos conocerte</button>
+      </div>
+      <img class="img-fluid rounded mx-auto d-block" src="./images/descargar.png" alt="Utah 2023">
+  </article>
+    
+
+    <!-- MODO OSCURO - MODO CLARO -->
+    <article>
+      <div class="container m-4">
+        <div class="row">
+          <div class="col-2">
+            <button id="btnOscuro" class="btn btn-dark">Modo Oscuro</button>
+          </div>
+          <div class="col-2">
+            <button id="bntClaro" class="btn btn-light">Modo Claro</button>
+          </div>
+        </div>
+      </div>
+    </article>
+      
+    <!-- Carousel de inicio -->
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/lebronJames2.jpg" class="d-block w-100" alt="maximo anotador de la historia" width="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>LeBRON James se convierte en el maximo goleador de la historia de la NBA</h5>
+              <p>Superando a Kareem Abdul Jabar el rey en el partido vs OKC hizo historia!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/quintetosAllStar.webp" class="d-block w-100" alt="TITULARESCONFERENCIAESTE">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¡El grupo de titulares #NBAAllStar de la Conferencia Este!</h5>
+              <p>Kevin Durant, Kyrie Irving, Giannis Antetokounmpo(cap), Donovan Mitchel, Jayson Tatum</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    
+
+    <br><br>
+
+    <!-- Formulario sobre tu jugador favorito -->
+    <form id="formJugadorFavorito">
+      <h3 class="text-center">Jugador Favorito</h3>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Cual es tu jugador favorito?</label>
+        <input type="text" id="inputJugador" class="form-control"  placeholder="Ej: LeBron James">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">En que equipo juega?</label>
+        <input type="text" id="inputEquipo" class="form-control"  placeholder="Ej: Los Angeles Lakers">
+      </div>
+    </form>
+    <br>
+    <button id="elegirJugadorBtn" type="button" class="btn btn-secondary">Votalo</button>
+    <br><br>
+
+    
+    <div class="text-center">
+      <button id="tusVotosBtn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">TUS VOTOS</button>
+    </div>
+
+    <br><br>
+    
+    <!-- CARDS jugadores -->
+    <div class="container">
+      <div id="losMejores" class="row"></div>
+    </div>
+
+    <br><br>
+
+    <!-- Loader -->
+      <div class="text-center">
+        <h3 id="loaderTitulo" class="text-primary text-center">Los jugadores mas votados..</h3>
+          <div id="loaderBtn" class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    
+
+    <!-- CARDS MVP -->
+    <div class="container">
+      <div id="elMejor" class="row"></div> 
+    </div>
+
+    <br><br>
+
+    <!-- Camino al mvp -->
+    <div class="container">
+      <h3 class="text-center">Camino al MVP</h3>
+      <br>
+      <h4 class="text-center">En orden de quien se esta llevando el premio MVP:</h4>
+      <br>
+      <div id="jugadores" class="row text-center"></div>
+    </div>
+    
+  <!-- MODALS -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Tus votos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalVotos">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" id="guardarVotos">Guarda tus votos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <!-- Sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+  <!-- Archivos JS -->
+    <script src=".//Javascript/index.js"></script> 
+    <script src=".//Javascript/bienvenidaMenu.js"></script>
+    <script src=".//Javascript/modoOscuro.js"></script>
+  </body>
+</html>
